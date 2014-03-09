@@ -21,7 +21,7 @@ define(function(require) {
 
     renderAll: function() {
       var bookView;
-      var ul = this.$el.find('#booklist');
+      var ul = this.$el.find('#bookList');
       this.collection.each(function(book) {
         bookView = new BookView({ model: book });
         ul.append(bookView.render().el);
