@@ -29,7 +29,19 @@ define(function(require) {
     },
 
     books: function() {
-      var booksView = new BooksView();
+      var books = [
+        {
+          title: 'Object Oriented Ruby'
+        },
+        {
+          title: 'Code Clean'
+        },
+        {
+          title: 'Refactoring'
+        }
+      ];
+      var booksCollection = new Backbone.Collection(books);
+      var booksView = new BooksView(booksCollection);
       this.swapView(booksView);
     },
 
@@ -43,14 +55,13 @@ define(function(require) {
     },
 
     home: function() {
-      var navView = new NavView();
-      $('#nav').html(navView.render().el);
       var homeView = new HomeView();
       $('#app').html(homeView.render().el);
     },
 
-    init: function() {
-
+    initialize: function() {
+      var navView = new NavView();
+      $('#nav').html(navView.render().el);
     },
 
     swapView: function(view) {
