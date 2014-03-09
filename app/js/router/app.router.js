@@ -6,6 +6,7 @@ define(function(require) {
   var Backbone = require('backbone');
   var AddBlogView = require('views/add.blog.view');
   var BlogView = require('views/blog.view');
+  var BooksView = require('views/books.view');
   var HomeView = require('views/home.view');
   var NavView = require('views/navbar.view');
 
@@ -13,6 +14,7 @@ define(function(require) {
     routes: {
       "": "home",
       "blog": "blog",
+      "books": "books",
       "addBlog": "addBlog"
     },
 
@@ -24,6 +26,11 @@ define(function(require) {
     blog: function() {
       var blogView = new BlogView();
       this.swapView(blogView);
+    },
+
+    books: function() {
+      var booksView = new BooksView();
+      this.swapView(booksView);
     },
 
     destroyView: function(view) {
