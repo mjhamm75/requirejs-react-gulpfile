@@ -11,6 +11,7 @@ define(function(require) {
       var classes = cx({
         'hidden': true
       });
+
       return (
       <ul className="nav navbar-nav navbar-right">
         <li><a href="#blog">Blog</a></li>
