@@ -143,7 +143,7 @@ define(function() {
 
       showdown: 'libs/showdown/src/showdown',
 
-      react: 'libs/react/react',
+      react: 'libs/react/react-with-addons',
 
       jsx: 'libs/require-jsx/jsx',
       JSXTransformer: 'libs/react/JSXTransformer',
